@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="io.chthonic.codprob.ui.list.view.ListFragment"
+        android:label="@string/list_label"
+        tools:layout="@layout/list_fragment">
+        <action
+            android:id="@+id/viewChallenge"
+            app:destination="@id/challengeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/challengeFragment"
+        android:name="io.chthonic.codprob.ui.challenge.view.ChallengeFragment"
+        android:label="{title}"
+        tools:layout="@layout/challenge_fragment">
+        <argument
+            android:name="challenge"
+            app:argType="io.chthonic.codprob.ui.common.model.ChallengeUiModel" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

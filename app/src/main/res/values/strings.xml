@@ -1,0 +1,37 @@
+<resources>
+    <string name="warn_no_camera">No camera available</string>
+    <string name="err_unable_create_file">Unable to create photo file.</string>
+    <string name="msg_photo_added">Photo added</string>
+    <string name="msg_photo_deleted">Photo deleted</string>
+    <string name="msg_photos_cleared">Photos cleared</string>
+
+    <string name="share">Share</string>
+
+    <string name="clear">Clear photos</string>
+
+    <string name="pending">Pending&#8230;</string>
+
+    <string name="delete">Delete photo</string>
+
+    <string name="list_label">@string/app_name</string>
+
+    <string name="empty_state_title">Say cheese!</string>
+
+    <string name="empty_state_descript">Please take some photos.</string>
+
+    <string name="are_you_sure">Are you sure?</string>
+
+    <string name="yes">Yes</string>
+
+    <string name="no">No</string>
+
+    <string name="app_version">version %s</string>
+
+    <string name="share_photo">Share photo</string>
+
+    <string name="descript_thumbnail_image">Thumbnail image</string>
+    <string name="descript_full_image">Full image</string>
+    <string name="descript_empty_image">Empty state image</string>
+    <string name="descript_take_photo">Take a photo</string>
+
+</resources>

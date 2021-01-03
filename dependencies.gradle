@@ -1,0 +1,15 @@
+ext {
+
+    versions += [
+            jetbrains: [
+                    coroutines: "1.4.0"
+            ],
+            androidx : [
+                    annotation      : "1.1.0",
+                    nav             : versions.androidx_nav,
+                    lifecycle       : "2.2.0",
+                    constraintlayout: "2.0.4"
+            ],
+            timber : "4.7.1"
+    ]
+}
