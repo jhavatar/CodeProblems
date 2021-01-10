@@ -17,7 +17,7 @@ class SampleViewHolder(private val binding: SampleHolderBinding) : RecyclerView.
     }
 
     fun bind(result: ChallengeSampleResult) {
-        binding.sampleName.text = "${result.sampleIndex} ${if (result.pass) "pass" else "fail"}"
+        binding.sampleName.text = "${result.sampleIndex} ${if (result.pass) "pass" else "fail"} (${result.durationInMillis}ms)"
     }
 
 }

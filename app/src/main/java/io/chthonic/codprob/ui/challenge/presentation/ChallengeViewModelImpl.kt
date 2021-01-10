@@ -9,8 +9,6 @@ import io.chthonic.codprob.entity.challenge.ChallengeSampleResult
 import io.chthonic.codprob.ui.common.model.ChallengeUiModel
 import io.chthonic.codprob.ui.common.presentation.BaseViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.channels.consumeEach
-import kotlinx.coroutines.channels.filter
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
@@ -41,8 +39,9 @@ class ChallengeViewModelImpl @ViewModelInject constructor(private val challengeI
             }.collect {
                 Timber.v("resultsObservable: $it")
                 val resultList = _resultsObservable.value?.toMutableSet() ?: mutableSetOf()
+                Timber.v("resultsObservable: resultList = $resultList")
                 resultList.add(it)
-                _resultsObservable.postValue(resultList.toMutableList().sortedBy { it.sampleIndex })
+                _resultsObservable.value = resultList.toMutableList().sortedBy { it.sampleIndex }
             }
         }
     }

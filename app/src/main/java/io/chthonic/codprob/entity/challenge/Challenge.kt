@@ -4,11 +4,19 @@ import androidx.annotation.WorkerThread
 
 interface Challenge<Input, Output> {
 
+    enum class Difficulty {
+        EASY,
+        MEDIUM,
+        HARD
+    }
+
     val index: Int
 
     val name: String
 
     val description: String
+
+    val difficulty: Difficulty
 
     val samples: List<ChallengeSample<Input, Output>>
 
