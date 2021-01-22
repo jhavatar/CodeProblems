@@ -27,7 +27,9 @@ class ChallengesRepoImpl @Inject constructor() : ChallengesRepo {
             FormatPhoneNumber(idx++),
             CountHawaiianWeeks(idx++),
             SherlockAndValidString(idx++),
-            MergeSortCountingInversion(idx++)
+            MergeSortCountingInversion(idx++),
+            BiggestChange(idx++),
+            BuildWord(idx++)
         )
     }
 
